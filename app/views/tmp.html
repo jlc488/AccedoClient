@@ -1,0 +1,19 @@
+<!-- thumbnail start -->
+<slick init-onload="true" infinite="true" slides-to-show="6" slides-to-scroll="1">
+  <div class="row" >
+
+    <div class="col-xs-6 col-md-2" ng-repeat="data in result.entries">
+      <div class="thumbnail" idx="{{$index}}">
+        <a href="" title="{{data.contents[0].url}}" ng-click="gogo($index)">
+          <img ng-src="{{data.images[0].url}}" alt="{{data.description}}" >
+        </a>
+        <div class="caption">
+          <p>{{data.title}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end of div row -->
+  </slick>
+
+<!-- thumbnail end -->

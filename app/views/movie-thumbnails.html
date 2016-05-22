@@ -1,0 +1,15 @@
+<!-- thumbnail start -->
+<slick ng-if="dataLoaded" settings="slickConfig" data="dataLoaded" init-onload="false" slides-to-show="6" slides-to-scroll="1">
+    <div class="thumbnail" ng-repeat="data in result.entries">
+      <div class="" idx="{{$index}}">
+        <a ng-click="open($index)" class="slick-active" title="{{data.contents[0].url}}" >
+          <img ng-src="{{data.images[0].url}}" alt="{{data.description}}" >
+        </a>
+        <div class="caption">
+          <p>{{data.title}}</p>
+        </div>
+      </div>
+    </div>
+</slick>
+
+<!-- thumbnail end -->
