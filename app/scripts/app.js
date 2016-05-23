@@ -27,6 +27,11 @@ angular
         controller: 'MovieThumbnailCtrl',
         controllerAs: 'MTCtrl'
       })
+      .when('/history',{
+        templateUrl: 'views/history.html',
+        controller: 'HistoryCtrl',
+        controllerAs: 'HCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
