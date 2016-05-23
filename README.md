@@ -13,7 +13,7 @@ git clone https://github.com/jlc488/AccedoClient.git
 
 Install  `grunt-cli`, `bower`:
 ```
-npm install -g grunt-cli bower karma 
+npm install -g grunt-cli bower karma
 ```
 
 You will need to first install Ruby and Compass for Sass used in this project :
@@ -23,6 +23,10 @@ You will need to first install Ruby and Compass for Sass used in this project :
 npm install -g compass
 ```
 
+Running npm & bower command to install dependencies
+```
+npm install && bower install
+```
 
 ## Build & development
 
