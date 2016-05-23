@@ -3,7 +3,6 @@
 
 angular.module('accedoClientApp')
   .controller('MovieViewCtrl',['$scope','HistoryService','$rootScope', '$uibModalInstance','idx', function($scope, HistoryService, $rootScope, $uibModalInstance, idx){
-    console.log(idx);
 
     $scope.videoURL = $rootScope.ret.entries[idx].contents[0].url;
     $scope.imgURL = $rootScope.ret.entries[idx].images[0].url;

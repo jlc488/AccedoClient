@@ -71,6 +71,11 @@ width: 100%
   width: 1170px;
 }
 
+.thumbnail{
+  overflow: hidden;
+  height: 400px;
+}
+
 .thumbnail a :hover,
 .thumbnail a :focus,
 .thumbnail a .active {
@@ -80,7 +85,12 @@ width: 100%
   box-shadow: 5px 5px 5px #888888;
 }
 
-
+.selected{
+  border-color: #888888;
+  -webkit-box-shadow: 5px 5px 5px #888888;
+  -moz-box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px #888888;
+}
 
 .nojs {
   padding: 2px;
