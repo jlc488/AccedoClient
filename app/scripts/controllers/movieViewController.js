@@ -31,7 +31,7 @@ angular.module('accedoClientApp')
           //  console.log('onPlayerReady : : ', api);
            $scope.videoAPI = api;
            $scope.videoAPI.toggleFullScreen();
-       }
+       };
 
     $scope.close = function () {
       $uibModalInstance.dismiss('cancel');
