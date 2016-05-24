@@ -5,11 +5,13 @@ angular.module('accedoClientApp')
   .factory('HistoryService', function( $http){
     var thisHistoryService = {};
 
+    var baseURL = ( true ) ? 'http://localhost:7878' : 'http://accedotv-server.eastasia.cloudapp.azure.com:9000';
+
     //fetch all the history data from DB
     thisHistoryService.FindAll = function(){
       var promise = $http({
         method : 'GET',
-        url : 'http://localhost:7878/api/history'
+        url : baseURL + '/api/history'
       })
         .then(function(resp){
           return resp.data;
@@ -23,7 +25,7 @@ angular.module('accedoClientApp')
     thisHistoryService.Add = function( obj ){
       var promise = $http({
         method : 'POST',
-        url : 'http://localhost:7878/api/history',
+        url : baseURL + '/api/history',
         data : obj
       })
         .then(function(resp){

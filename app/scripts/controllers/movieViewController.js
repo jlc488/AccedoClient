@@ -4,11 +4,7 @@
 angular.module('accedoClientApp')
   .controller('MovieViewCtrl',['$scope','HistoryService','$rootScope', '$uibModalInstance','idx','$sce', function($scope, HistoryService, $rootScope, $uibModalInstance, idx, $sce){
 
-    $scope.API = null;
-
-    $scope.onPlayerReady = function(API){
-        $scope.API = API;
-    };
+    $scope.videoAPI = null;
 
     $scope.config = {
       preload: 'none',
@@ -23,19 +19,28 @@ angular.module('accedoClientApp')
         url: 'http://www.videogular.com/styles/themes/default/latest/videogular.css'
       },
       plugins:{
-        poster:$rootScope.ret.entries[idx].images[0].url
+        poster:$rootScope.ret.entries[idx].images[0].url,
+        controls: {
+                       autoHide: true,
+                       autoHideTime: 5000
+                   }
       }
     };
+
+    $scope.onPlayerReady = function(api) {
+          //  console.log('onPlayerReady : : ', api);
+           $scope.videoAPI = api;
+           $scope.videoAPI.toggleFullScreen();
+       }
 
     $scope.close = function () {
       $uibModalInstance.dismiss('cancel');
     };
-/*
-    var ret = HistoryService.Add($rootScope.ret.entries[$routeParams.id]).then(function(d){
+
+    HistoryService.Add($rootScope.ret.entries[idx]).then(function(d){
       console.log(d);
     }, function( d ){
       console.log(d);
     });
-*/
 
 }]);
