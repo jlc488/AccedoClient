@@ -2,10 +2,30 @@
 
 
 angular.module('accedoClientApp')
-  .controller('MovieViewCtrl',['$scope','HistoryService','$rootScope', '$uibModalInstance','idx', function($scope, HistoryService, $rootScope, $uibModalInstance, idx){
+  .controller('MovieViewCtrl',['$scope','HistoryService','$rootScope', '$uibModalInstance','idx','$sce', function($scope, HistoryService, $rootScope, $uibModalInstance, idx, $sce){
 
-    $scope.videoURL = $rootScope.ret.entries[idx].contents[0].url;
-    $scope.imgURL = $rootScope.ret.entries[idx].images[0].url;
+    $scope.API = null;
+
+    $scope.onPlayerReady = function(API){
+        $scope.API = API;
+    };
+
+    $scope.config = {
+      preload: 'none',
+      sources:[
+        {
+          src: $sce.trustAsResourceUrl($rootScope.ret.entries[idx].contents[0].url),
+          type: 'video/mp4'
+        }
+      ],
+      tracks:[],
+      theme: {
+        url: 'http://www.videogular.com/styles/themes/default/latest/videogular.css'
+      },
+      plugins:{
+        poster:$rootScope.ret.entries[idx].images[0].url
+      }
+    };
 
     $scope.close = function () {
       $uibModalInstance.dismiss('cancel');
@@ -17,9 +37,5 @@ angular.module('accedoClientApp')
       console.log(d);
     });
 */
-  }])
-  .filter('trusted', ['$sce', function ($sce) {
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
+
 }]);

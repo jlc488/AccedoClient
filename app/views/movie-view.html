@@ -1,6 +1,15 @@
-<div class="fullscreen-bg">
-   <video controls poster="{{imgURL}}" class="fullscreen-bg__video" ui-event="{ended : 'close()'}">
-     <source ng-src="{{videoURL | trusted}}" type="video/mp4" >
-   </video>
-</div>
+  <div class="videogular-container">
+   <videogular vg-theme="config.theme.url" vg-player-ready="onPlayerReady($API)" ui-event="{ended : 'close()'}">
+     <vg-media vg-src="config.sources" vg-native-controls="true">
+     </vg-media>
+
+
+        <vg-overlay-play></vg-overlay-play>
+        <vg-poster vg-url='config.plugins.poster'></vg-poster>
+
+        <div class="my-logo-layer" ng-show="API.currentState != 'play'">
+            <img src="http://www.videogular.com/img/videogular.png">
+        </div>
+   </videogular>
+ </div>
 </div>

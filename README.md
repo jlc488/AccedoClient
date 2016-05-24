@@ -61,7 +61,7 @@ npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-cor
 ```
 run the npm command as above
 
-while running 'grunt' command, if you are facing compass related errors, make sure you have properly installed ruby and extention 
+while running 'grunt' command, if you are facing compass related errors, make sure you have properly installed ruby and extention
 
 ```
 sudo apt-get install ruby
@@ -75,3 +75,6 @@ sudo gem install compass
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+
+## Demo URL
