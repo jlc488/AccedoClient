@@ -71,6 +71,9 @@ sudo apt-get install ruby-compass
 sudo gem install compass
 ```
 
+uglify & minify cause unknown errors at the moment. If you are running on local machine use 'grunt serve' only.
+
+'grunt serve:dist' will cause you a problem
 
 ## Testing
 
@@ -78,3 +81,5 @@ Running `grunt test` will run the unit tests with karma.
 
 
 ## Demo URL
+
+http://accedotv-client.eastasia.cloudapp.azure.com:9000
