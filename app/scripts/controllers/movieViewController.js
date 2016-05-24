@@ -30,7 +30,6 @@ angular.module('accedoClientApp')
     $scope.onPlayerReady = function(api) {
           //  console.log('onPlayerReady : : ', api);
            $scope.videoAPI = api;
-           $scope.videoAPI.toggleFullScreen();
        };
 
     $scope.close = function () {
