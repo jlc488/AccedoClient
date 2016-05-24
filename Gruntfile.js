@@ -277,8 +277,9 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
+              js: ['concat'],
               css: ['cssmin']
+              // js: ['concat', 'uglifyjs']
             },
             post: {}
           }
@@ -394,7 +395,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Replace Google CDN references
+    //Replace Google CDN references
     cdnify: {
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
@@ -501,7 +502,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'cdnify',
     'cssmin',
-    'uglify',
+    // 'uglify',
     'filerev',
     'usemin',
     'htmlmin'

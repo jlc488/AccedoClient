@@ -9,15 +9,15 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/slick-theme.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="accedoClientApp" ng-keydown="checkBtnEvent($event)">
+  <body ng-app="accedoClientApp" ng-keydown="checkBtnEvent($event)" >
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -61,10 +61,10 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="bower_components/angular-slick-carousel/dist/angular-slick.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-ui-event/dist/event.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -74,6 +74,7 @@
         <script src="scripts/service/historyService.js"></script>
         <script src="scripts/controllers/movieThumbnailController.js"></script>
         <script src="scripts/controllers/movieViewController.js"></script>
+        <script src="scripts/controllers/historyController.js"></script>
         <!-- endbuild -->
 </body>
 </html>
