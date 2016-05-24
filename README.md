@@ -39,7 +39,7 @@ $ sudo yum install ruby
 npm install -g compass
 ```
 ```
-gem install compass   (Windwos)
+gem install compass
 ```
 
 Running npm & bower command to install dependencies
@@ -51,7 +51,6 @@ npm install && bower install
 
 Run `grunt` for building and `grunt serve` for preview.
 
-Run `grunt serve:dist` to see the distribution output
 
 ## Issues
 
@@ -62,6 +61,15 @@ npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-cor
 ```
 run the npm command as above
 
+while running 'grunt' command, if you are facing compass related errors, make sure you have properly installed ruby and extention 
+
+```
+sudo apt-get install ruby
+
+sudo apt-get install ruby-compass
+
+sudo gem install compass
+```
 
 
 ## Testing
