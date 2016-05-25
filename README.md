@@ -77,6 +77,9 @@ uglify & minify cause unknown errors at the moment. If you are running on local 
 
 Running `grunt test` will run the unit tests with karma.
 
+## Reminder
+
+To connect with local backend server, you have to change the baseURL value from historyService.js line No. 8
 
 ## Demo URL
 
