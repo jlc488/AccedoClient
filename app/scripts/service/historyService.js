@@ -5,7 +5,7 @@ angular.module('accedoClientApp')
   .factory('HistoryService', function( $http){
     var thisHistoryService = {};
 
-    var baseURL =/* ( true ) ? 'http://localhost:7878' : */'http://accedotv-server.eastasia.cloudapp.azure.com:9000';
+    var baseURL = 'http://accedotv-server.eastasia.cloudapp.azure.com:9000';
 
     //fetch all the history data from DB
     thisHistoryService.FindAll = function(){
