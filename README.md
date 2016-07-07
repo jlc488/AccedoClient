@@ -83,4 +83,4 @@ To connect with local backend server, you have to change the baseURL value from 
 
 ## Demo URL
 
-http://accedotv-client.eastasia.cloudapp.azure.com:9000
+<del>http://accedotv-client.eastasia.cloudapp.azure.com:9000</del>
